@@ -264,7 +264,7 @@ var modctx = DMI.modctx = {
 			DMI.MItem.initItem(modctx.item);
 		},
 		selectitem: function(c,a,t,fnw){
-			if (a.n1>499 && a.n1<1000)  {
+			if (a.n1>499)  {
 				modctx._new(c, a,'item', fnw);
 				DMI.MItem.initItem(modctx.item);
 			} else {
@@ -387,7 +387,7 @@ var modctx = DMI.modctx = {
 				while (modctx.sitelookup[id]) id++;
 				a.n1 = id;
 			} else {
-				if (a.n1<1500 || a.n1>1999) throw 'invalid id';
+				if (a.n1<1500) throw 'invalid id';
 			}
 
 			modctx._new(c,a ,'site',fnw);
@@ -411,7 +411,7 @@ var modctx = DMI.modctx = {
             modctx._select(c,a,'nametype',fnw);
 
             if (a.n1 >= 100 && a.n1 <= 152) return;
-            if (a.n1 >= 161 && a.n1 <= 299) return;
+            if (a.n1 >= 161) return;
 
             throw 'invalid id';
         },
