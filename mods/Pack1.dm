@@ -21227,6 +21227,7 @@ A Pillar of Plenty will generate anywhere between one to three Astral gems, and 
 #coldres 3
 #end
 
+
 #newmonster 4046
 #spr1 "./Sombre_Warhammer/Warhammer_Empire/IC White Wolf.tga"
 #spr2 "./Sombre_Warhammer/Warhammer_Empire/IC White Wolf2.tga"
@@ -24211,8 +24212,8 @@ A Pillar of Plenty will generate anywhere between one to three Astral gems, and 
 #unsurr 3
 #end
 
+
 #newmonster 4130
-#copystats 3750 -- template kislevite
 #spr1 "./Sombre_Warhammer/Warhammer_Kislev/Wizard_Ice_Lesser.tga"
 #spr2 "./Sombre_Warhammer/Warhammer_Kislev/Wizard_Ice_Lesser2.tga"
 #name "Ice Wizard of Kislev"
@@ -24241,7 +24242,10 @@ A Pillar of Plenty will generate anywhere between one to three Astral gems, and 
 #okleader
 #command -30
 #combatcaster
+#snow
+#nametype 146 -- rus male
 #end
+
 
 #newmonster 4131
 #spr1 "./Sombre_Warhammer/Warhammer_Empire/Wizard Bright.tga"
@@ -48409,4 +48413,5 @@ Forge give gems, Gromril gives gems and resources, Gold gives gold. A Forge or G
 #id 19
 #msg "The province has been covered by an unnatural darkness for the entire month, and it does not appear to be lifting yet."
 #end
+
 
