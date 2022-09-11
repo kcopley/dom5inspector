@@ -264,11 +264,15 @@ var modctx = DMI.modctx = {
 			DMI.MItem.initItem(modctx.item);
 		},
 		selectitem: function(c,a,t,fnw){
-			if (a.n1>499)  {
-				modctx._new(c, a,'item', fnw);
-				DMI.MItem.initItem(modctx.item);
-			} else {
+			try {
 				modctx._select(c,a,'item',fnw);
+			}
+			catch(e) {
+				if (e == 'data not found' && a.n1) {
+					modctx._new(c, {n1:id} ,'item', fnw);
+					DMI.MItem.initItem(modctx.item);
+				}
+				else throw e;
 			}
 		},
 
@@ -395,7 +399,16 @@ var modctx = DMI.modctx = {
 		},
 
 		selectsite: function(c,a,t,fnw){
-			modctx._select(c,a,'site',fnw);
+			try {
+				modctx._select(c,a,'site',fnw);
+			}
+			catch(e) {
+				if (e == 'data not found' && a.n1) {
+					modctx._new(c,a,'site',fnw);
+					DMI.MSite.initSite(modctx.site);
+				}
+				else throw e;
+			}
 		},
 
 		newevent: function(c,a,t,fnw) {
