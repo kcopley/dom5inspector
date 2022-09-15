@@ -223,7 +223,7 @@ MSpell.prepareData_PostMod = function() {
 		 * the copied value should still work.
 		 */
 		if(o.modded && o.fatiguecost) {
-			o.gemcost = Math.floor(parseInt(o.fatiguecost) / 100);
+			o.gemcost = Math.floor(parseInt(o.fatiguecost) / 100.0);
 		}
 		
 		//combat fatiguecost
